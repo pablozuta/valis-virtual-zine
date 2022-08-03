@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+    background: rgb(9, 4, 9);
+    text-align: center;
+    font-size: 2rem;
+    }
+
+
+.titleText{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+h1{
+    font-size: 8vw;
+    margin-top: 3.3rem;
+    font-weight: 300;
+    letter-spacing: .9rem;
+    font-family: 'Orbitron', cursive;
+    color: wheat;
+ }
+ 
+ 
+ h2{
+     font-size: 1.8rem;
+     margin-left: 1rem;
+     text-align: left;
+ }
+
+
+
+
+/*aca empieza el style de books */
+h4{
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: 0.9rem;
+    margin-top: 2.7%;
+}
+
+.grid-6{
+    text-align:justify;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(21rem, 1fr)) ;
+    padding: 5%;
+    gap: 3rem;
+}
+
+.artist__img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+/*aca termina el style de books */
+
+
+
+/* aca empieza el style de tech */
+
+.texto{
+    margin: 3%;
+    padding: 13px;
+    opacity: 90%;
+    background-color: rgb(177, 61, 231);
+    text-align: left;    
+}
+
+.textoAmarillo{
+    margin: 3%;
+    padding: 13px;
+    opacity: 90%;
+    background-color: rgb(149, 168, 54);
+    text-align: left;    
+}
+.textoBlanco{
+    margin: 3%;
+    padding: 13px;
+    opacity: 90%;
+    background-color: rgb(233, 236, 222);
+    text-align: left;    
+}
+
+.pText{
+    padding: 0.7rem;
+    line-height: 137%;
+    color:black;
+    font-size: 1.2rem;
+    margin-top: 2.7%;
+    font-weight: 100;
+}
+
+
+.pArticles{
+    text-align: left;
+    font-size: 1.2rem;
+    margin-top: 2.7%;
+}
+
+.article{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    
+}
+
+.texto-articulo{
+    padding: 15%;
+    padding-top: 3%;
+}
+
+.imagen-articulo{
+    margin-top: 3%;
+    width: 84%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.texto-fecha{
+    margin-left: 2rem;
+    margin-top: 2%;
+    font-style: italic;
+    font-size: .9rem;
+}
+
+h3{
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+
+@media (max-width:520px){
+    .texto-articulo{
+    padding: 7%;
+   }
+    
+    }
+
+
+
+ 
+
+ 
+
+   
+  
+
+
+  
