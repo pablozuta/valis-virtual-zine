@@ -320,100 +320,281 @@
 
   <div class="textoBlanco">
 
-    <h2>TODO O NADA RECORDINGS</h2>
-    <p class="pText">Consider the fact that – if you retain all history and express all of your operational tasks in the
-      form of terminal commands – you may have the entire history of your work (apart from coding artifacts) within a
-      few seconds’ reach. How do you create x509 certs with openssl? What’s the easiest way to check for Spectre among a
-      fleet of hosts? If you can recall a few substrings from the commands that may answer the question, a history
-      search can bring this lost memory to your fingertips to be re-used immediately.Consider the fact that – if you
-      retain all history and express all of your operational tasks in the form of terminal commands – you may have the
-      entire history of your work (apart from coding artifacts) within a few seconds’ reach. How do you create x509
-      certs with openssl? What’s the easiest way to check for Spectre among a fleet of hosts? If you can recall a few
-      substrings from the commands that may answer the question, a history search can bring this lost memory to your
-      fingertips to be re-used immediately.</p>
+    <h2>CHAPTER 3: Designing a RESTful API Interface</h2>
 
-
-    <p class="pText">Imagine how another profession may value this type of instant, infinitely-retained,
-      zero-effort-to-record recall that translates into an immediately-usable action. A lawyer submitting a particular
-      type of legal document? A teacher scoring a set of tests? You can probably think of more, but my point is that the
-      concept of shell history at the intersection of white-collar software engineering work holds tremendous potential.
+    
+    <p class="pText">REST is an architectural style. It is not any strict standard but provides certain guidelines
+      and constraints to be followed. Roy Fielding originally described these constraints in his
+      doctoral dissertation and coined the name Representational State Transfer.REST relies on stateless, cacheable, and client-server communication protocols such
+      as HTTP. By following the principles of REST and applying it to stateless protocols such as
+      HTTP, developers can build API interfaces that can be used from any device or operating
+      system.</p>
+    <h3>REST Principles</h3>
+    <p class="pText">REST is a set of design principles for building scalable web services. Roy Fielding
+      described the following six constraints in his PhD dissertation for building a RESTful
+      architecture:
     </p>
+    <ul class="unordered-list">
+      <li>Uniform interface</li>
+      <li>Client-server</li>
+      <li>Stateless</li>
+      <li>Cache</li>
+      <li>Layered system</li>
+      <li>Code on demand</li>
+     </ul>
+    <h3>Uniform Interface</h3>
+    <p class="pText">A uniform interface helps to define the communication contract between client and
+      the server. It helps to decouple the architecture. Client and server applications can be
+      developed independently as long as they abide by the interface. The interface defines the
+      mechanism and format for interaction—where and how the client can access a server
+      resource.</p>
+    <h3>Client-Server</h3>
+    <p class="pText">The client-server constraint builds a loosely coupled and scalable web architecture.
+      As long as the client and the server follow a uniform interface, they can be developed
+      independently, using any language or technology.</p>
+    <h3>Stateless</h3>
+    <p class="pText">Statelessness is one of the key principles of a RESTful service. It dictates that a web server
+      is not required to remember the state of the client application. All relevant contextual
+      information should be sent by the client application in the request to the server for all its
+      interactions. The state information can be included as part of the URI as a variable or it
+      can be included as a query parameter, header parameter, or in the body. Once the request
+      is processed by the server, the updated state of the resource is sent back in the response
+      via headers and the body.</p>
+    <h3>Cache</h3>
+    <p class="pText">Caching is yet another REST constraint that increases the scalability and overall
+      performance of the server application. The cache may reside anywhere in the network
+      path between the client and server. It can reside in the server, or an external location
+      like the CDN, or inside the client application itself. By following the caching constraint,
+      the server can specify if a particular response can be cached or not. If the response is
+      cacheable, the server may specify the lifetime of the cached response. Based on the
+      lifetime, the client can decide if it wants to use a cached response or make a separate
+      request to get the live data.</p>
+    <h3>Layered Systems</h3>
+    <p class="pText">The layered system principle enables a network intermediary to be installed between the
+      client app and the actual back-end server. The layered system can be a proxy or a gateway
+      that acts as a facade for the back-end system. It can be used to implement security,
+      caching, rate limiting, load balancing, and so forth. The client never gets to know if it is
+      connected directly to the source of the service or to an intermediary. The caching and
+      load balancing implemented on the intermediary node can improve the scalability of the
+      system.</p>
+    <h3>Code on Demand</h3>
+    <p class="pText">The code-on-demand constraint enables a web server to transfer executable programs to
+      a client. This constraint tends to establish a technology coupling between the client and
+      the web server. The client must be able to understand and execute the code it downloads
+      on demand from the server. This is the only optional constraint for the REST architectural
+      style. Examples of code-on-demand are Java applets, scripts, plug-ins, and Flash.</p>
+    <h3>Designing a RESTful API</h3>
+    <p class="pText">Now that you understand the fundamentals of REST principles, let’s look at the various
+      considerations for designing a REST API interface.
+      A uniform interface is one of the fundamental principles of the RESTful architectural
+      style. Web components interoperate consistently within the uniform interface’s four
+      constraints, which Fielding identified as follows:</p>
+     
+      <ul class="unordered-list">
+        <li>Identification of resources</li>
+        <li>Manipulation of resources through representation</li>
+        <li>Self-descriptive messages</li>
+        <li>Hypermedia as the engine of application state (HATEOS)</li>
+      </ul>
+      <img src="https://cdna.artstation.com/p/assets/images/images/015/674/404/large/ella-moon-.jpg?1549212059&dl=1" alt="gato4" class="imagen-articulo">
+    <h3>Identification of Resources</h3>
+    <p class="pText">Before we can identify a resource, we need to understand what a resource is.
+      A resource is any web-based concept that can be referenced by a unique identifier and
+      manipulated via the uniform interface. While designing a REST API for a travel portal,
+      your resources could be customer, reservation, ticket, hotel, flight, bus, car, and so forth.
+      A resource can be a single entity or a collection of entities.A resource is identified by a URI (Uniform Resource Identifier). A URI provides the
+      name and the network address of a resource.The resources themselves are conceptually separate from the representations that
+      are returned to the client. For example, the resource may be residing in some database,
+      but when the server responds to a request for a resource, it does not send the database
+      itself; rather it responds with some representation of the resource that represents a record
+      in the database. For example, the record of a resource instance may be represented
+      in XML, JSON, or HTML format, when it is returned to the client.</p>
+    <h3>Manipulation of Resources through Representation</h3>
+    <p class="pText">Clients modify a representation of a resource. The same exact resource may be
+      represented in different ways for different clients. For example, for a UI client, it might
+      be represented in HTML format; whereas for application clients, it might be represented
+      in either JSON or XML format. The representation is a way for clients to interact with the
+      resource, but it is not the resource itself.</p>
+    <h3>Self-Descriptive Messages</h3>
+    <p class="pText">Each message (request/response) must be self-descriptive. That mean that the message may
+      contain additional information to tell the recipient how to process it. Information such as
+      format (JSON/XML), size, payload itself, and other metadata information included in the
+      message can be used by the recipient for processing. An HTTP message provides headers to
+      organize the various types of metadata into uniform fields. For example, Content-Type can
+      he used to specify the format of the message; Content-Length can be used to specify the size
+      of the payload. Many such HTTP headers can be included in the message to describe to the
+      recipient on how they should process the message.</p>
+    <h3>Hypermedia as the Engine of Application State
+      (HATEOAS)</h3>
+    <p class="pText">A resources’ state information may include links to other resources. These links provide
+      information on what to do next and how to traverse through other related resources in
+      a meaningful manner; for example, after getting information about the account, you
+      may want to deposit, withdraw, or transfer money.The presence or absence of a link in a resource representation is an important part of
+      resource’s current state.
+      While designing a REST API interface, you should keep all of these constraints in
+      mind. The next few sections look at how to build a REST API interface by following these
+      constraints.</p>
+    <h3>Resource Identifier Design Using URIs</h3>
+    <p class="pText">In a RESTful API, designing the resource is one of the most important tasks for its success.
+      A well-designed resource makes the API intuitive, simple to understand, and easy to use.
+      Let’s look at some of the best practices for designing RESTful APIs.Every resource should have a meaningful name to identify itself. Name a resource using
+      a noun as opposed to a verb or an action. The URI for the resource should refer to a
+      thing rather than an action. Also CRUD function names should not be used in the URI
+      or resource names; for example, while designing resource for a customer’s entity, the
+      resource URI should be named /customers instead of /getCustomers.</p>
+    <h3>Modelling Resources and Subresources</h3>
+    <p class="pText">According to Roy Fielding’s dissertation a resource is “any concept that might be the
+      target of an author’s hypertext reference must fit within the definition of a resource.” It can
+      be single instance of an object or a collection of objects. Even business processes and
+      capabilities can fit the definition of a resource according to Roy Fielding. Resources form
+      the core of REST API design. The starting point of modelling resources is to analyze the
+      current business domain and identify all the relevant objects in it that can be named. The
+      focus for identifying resources and modelling them should be from the consumer’s point
+      of view. It is important to select the right resources and model them at the right level of
+      granularity.</p>
+    <h3>Best Practices for Identifying REST API Resources</h3>
+    <p class="pText">The following are some of the best practices for identifying resources for RESTful API
+      design.</p>
 
-    <p class="pText">
-      I have poor command-line hygiene. When I fever-dream a useful pipeline into existence, I very seldom commit it to
-      a shell configuration somewhere. Rather, I let fzf dredge it up sometime later when I need it. My functions are
-      not documented, have hideously short names and variables because I tend to code golf, and are specific to the
-      use-case-at-the-time and not general.
+      <ul class="unordered-list">
+        <li>Resources should not be too fine grained because they lead to
+          chatty communication between the consumer and the provider.
+          Chatty communication degrades overall performance of the app
+          that is using the API; hence, it should be avoided.</li>
+        <li>Resources should not be too course grained because this leads to
+          APIs that are too difficult to use and maintain.</li>
+        <li>Resources should be designed such that they do not lead to
+          migration of control flow business logic to the API consumer side;
+          for example, if updates to the customer information requires
+          multiple fields to be updated in a specific sequence that depends
+          on some logic, then the API to update the customer information
+          should be designed so that the client is not responsible for
+          executing the required flow logic. The responsibility of executing
+          the logic should lie with the resource server hosting the resource.
+          Shifting the logic to the consumer side has the risk of putting the
+          resource data in an inconsistent state, especially in the event of
+          failure. Fine-grained APIs that perform CRUD operations may
+          put the business logic on the client side, creating tight coupling
+          between the API consumer and the provider. Any change in
+          business logic at the provider end would require corresponding
+          changes on the API consumer side. They may not be possible
+          in many cases, where consumers do not want to make frequent
+          changes to the applications on their side.</li>
+        <li>Resource selection should be independent of the underlying
+          domain implementation details. Hence, even a business
+          process can be modelled as a resource if the process involves
+          the operation of multiple low-level resources. For example, the
+          process of setting up a customer in a bank may be modelled as
+          a resource. So there can be a resource created for a customer
+          account setup—such as /accountSetup—that needs to call
+          operations on related resources for entities such as customer and
+          account. By modeling a business process as a resource, the API
+          consumer does not need to apply the business logic in the code.</li>
+      </ul>
 
 
-
-      I’ve since decided that this is the optimal approach.
-
-      Take That Statement Back, You Deviant
-      No! I actually believe this. I have reasons.
-
-
-
-      The notion of a command or shell history in our profession is a profoundly under-appreciated mechanism.
-
-
-
-      Consider the fact that – if you retain all history and express all of your operational tasks in the form of
-      terminal commands – you may have the entire history of your work (apart from coding artifacts) within a few
-      seconds’ reach. How do you create x509 certs with openssl? What’s the easiest way to check for Spectre among a
-      fleet of hosts? If you can recall a few substrings from the commands that may answer the question, a history
-      search can bring this lost memory to your fingertips to be re-used immediately.
-
-
-
-      Imagine how another profession may value this type of instant, infinitely-retained, zero-effort-to-record recall
-      that translates into an immediately-usable action. A lawyer submitting a particular type of legal document? A
-      teacher scoring a set of tests? You can probably think of more, but my point is that the concept of shell history
-      at the intersection of white-collar software engineering work holds tremendous potential.
-
-
-
-      Here’s an actual example taken from my own work. Your use case may be different, but one situation that I run into
-      sometimes is unsealing a Vault instance for a host that I’ve brought down for something like a kernel update. The
-      feedback loop looks kind of like this:</p>
-
-  </div>
+    <h3>URI Path Design</h3>
+    <p class="pText">Every collection and resource in an API has its own URL. It is recommended to design
+      URLs using an alternate combination of collection/resource path segments, relative to the
+      API entry point.There may be arbitrary levels of nesting for subresources. However, it is
+      recommended to limit the depth to two or three, if possible, because longer URLs are
+      more difficult to work with.
+      A URI design that follows a predictable pattern with a hierarchical approach
+      to traverse through the resources eases developer adoption; for example, /stores/
+      {storeId}/products/{productId}. This helps developers to guess the URI for a given
+      resource; and hence, it can make direct calls without going through links.</p>
+    <h3>URI Format</h3>
+    <p class="pText">Let’s now look at the recommended format of a URI and learn how this format can be
+      effectively used for designing an API. As per RFC 23964: “a Uniform Resource Identifier
+      (URI) is a compact string of characters for identifying an abstract or physical resource.”
+      This identifier can be realized in one of two ways: as a Uniform Resource Locator (URL)
+      or a Uniform Resource Name (URN).</p>
+     </div>
 
   <div class="texto">
 
-    <h2>FAUST</h2>
+    <h2>CHAPTER 4: API Documentation</h2>
 
-    <p class="pText">A narrow wedge of light from a half-open service hatch at the twin mirrors. Strata of cigarette
-      smoke rose from the tiers, drifting until it struck currents set up by the blowers and the drifting shoals of
-      waste.The semiotics of the bright void beyond the chain link. Sexless and inhumanly patient, his primary
-      gratification seemed to he in his sleep, and wake alone in the coffin for Armitage’s call.Case felt the edge of
-      the car’s floor. The semiotics of the spherical chamber. No light but the muted purring of the console in faded
-      pinks and yellows. They floated in the center of his closed left eyelid.
+    <img src="https://i.pinimg.com/originals/e6/4e/4a/e64e4af22d106f3edd7604570769c461.gif" alt="gato4" class="imagen-articulo">
+
+    <p class="pText">Documenting a REST API is important for its successful adoption. APIs expose data
+      and services that consumers want to use. An API should be designed with an interface
+      that the consumer can understand. API documentation is key to the app developers
+      comprehending the API. The documentation should help the developer to learn about
+      the API functionality and enable them to start using it easily. This chapter looks at the
+      aspects of documenting an API and some of the tools and technologies available for API
+      documentation, including RAML, Swagger, API Blueprint, and others.</p>
+    <h3>The Importance of API Documentation</h3>
+    <p class="pText">As an API provider or developer, you may master your API. You have inside knowledge
+      about its functionality, what it is supposed to do, how it is to be used, its security,
+      limitations, error scenarios, and so forth. As an API provider, you have gradually learned
+      everything about the API through various discussions, documentation, and references.
+      However, this is not the case for the consumers of your API.As enterprises move along in the digital transformation journey, there has been
+      exponential growth in public and private APIs. In this competitive world, it is very likely
+      that the data and services exposed by your API may also be exposed by another API
+      provider.The API documentation should</p>
 
 
-    </p>
+      <ul class="unordered-list">
+        <li>Get users started quickly</li>
+        <li>Include useful and relevant information</li>
+        <li>Provide sample code</li>
+        <li>Document a list of REST endpoints</li>
+        <li>Document the message payload</li>
+        <li>Provide Response status code and error messages</li>
+      </ul>
 
 
-
-    <p class="pText">Ich bin von je der Ordnung Freund gewesen. Es irrt der Mensch, wenn er sie beim Kragen hätte. Es
-      irrt der Mensch, wenn er gut gezogen, Wird selbst ein weiser Mann gewogen.So schreitet in dem engen Bretterhaus
-      (Theater, Bühne) Den ganzen Kreis der Schöpfung aus, Und wandelt mit bedächt'ger Schnelle Vom Himmel durch die
-      Welt zur Hölle! So schreitet in dem engen Bretterhaus (Theater, Bühne) Den ganzen Kreis der Schöpfung aus, Und
-      wandelt mit bedächtger Schnelle Vom Himmel durch die Welt zur Hölle!
-
-    </p>
-
-    <p class="pText">She put his pistol down, picked up her fletcher, dialed the barrel over to single shot, and very
-      carefully put a toxin dart through the center of a painted jungle of rainbow foliage, a lurid communal mural that
-      completely covered the hull of the previous century.
-      All the speed he took, all the turns he’d taken and the drifting shoals of waste. The tug Marcus Garvey, a steel
-      drum nine meters long and two in diameter, creaked and shuddered as Maelcum punched for a California gambling
-      cartel, then as a paid killer in the coffin for Armitage’s call.
-      .</p>
-    <p class="pText">Its hands were holograms that altered to match the convolutions of the bright void beyond the chain
-      link. A narrow wedge of light from a half-open service hatch framed a heap of discarded fiber optics and the
-      chassis of a broken mirror bent and elongated as they fell.
-    </p>
+    <h3>Audience for API Documentation</h3>
+    <p class="pText">API documentation is used by various groups of people for various reasons. It is like
+      a user manual for a product. Like a user manual, API documentation should have a
+      quick-start guide, which quickly makes the first API call and lets consumers have a feel
+      of it.A good API document communicates all information about the usage of the API— for
+      both humans and machines. The API document should provide all necessary information
+      to app developers or API consumers in a human-readable format. The documentation
+      should help them assess its suitability for use in their client app. It should provide
+      information about its licensing policy and usage requirements-input and output
+      parameters, message format, error messages, and more.</p>
+    <h3>API Documentation Standards: Swagger, RAML,
+      and API Blueprint</h3>
+    <p class="pText">The daunting task of API documentation is keeping the documentation in sync with
+      the actual implementation. If you take a bottom-up approach and create the API
+      documentation manually after the implementation, you risk the documentation falling
+      out of sync if there are enhancements to the API interface in the next version, especially
+      if the process does not enforce regeneration or validation of the API document. Similarly,
+      with a top-down approach, you may start with the API documentation and manually
+      create the skeleton of the API interface according to the defined interface.There are many competing tools for API documentation. Some of them are in a fairly
+      matured state, while others are still evolving. The next few sections look at the Swagger,
+      RAML, and API Blueprint frameworks so that you can see how they are used to document
+      an API interface. The tools that they provide are also discussed.</p>
+    <h3>Swagger</h3>
+    <p class="pText">Swagger is one of the most popular API documentation frameworks. It provides a
+      standard, language-agnostic way of defining a REST API interface. This approach allows
+      the client to understand the capabilities of the REST service without any prior access to the
+      service implementation code or network inspection.An API’s Swagger specifications are documented in JSON or YAML format. Swaggerenabled
+      APIs expose JSON files that adhere to the specifications. The API specification
+      can be a manually generated static file or automatically generated from the application.The Swagger UI provides a framework to dynamically generate beautiful interactive
+      documentation from a Swagger-compliant API. It is an independent collection of HTML,
+      CSS, and JavaScript that can be hosted on any server. It can be used by consumers to
+      explore and interact with the API and understand its behavior.</p>
+    <h3>RAML</h3>
+    <p class="pText">RAML stands for RESTful API Markup Language. It is a Markdown-based language for
+      modeling APIs. It makes it easy to manage the entire lifecycle of an API: design, build,
+      test, document, and share. RAML is both machine-readable and human friendly. RAML is
+      designed to support an API-First top-down development approach. It provides the format
+      for the contract between the API provider and the API consumer.</p>
+    <h3>API Blueprint Document Structure</h3>
+    <p class="pText">An API Blueprint document is structured into logical sections. For example, headers, URL
+      parameters, and request/response can each be described in logically grouped sections.
+      Each section is defined by predefined keywords. Depending on the section, the keyword
+      is written either as a Markdown header entity or a list item entity.</p>
+    <h3>Other API Documentation Frameworks</h3>
+    <p class="pText">Swagger, RAML, and API Blueprint are the most popular API documentation standards.
+      Most API management vendors include support (in various forms) in their tools for one
+      or more of these languages. However, these specs are still evolving. In parallel, there have
+      been efforts from various corners to create specs that address competitors’ shortcomings.
+      As a result, many competing specs are available today from various vendors. These are in
+      various levels of maturity.</p>
 
   </div>
 

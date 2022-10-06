@@ -26,7 +26,7 @@ h1{
     font-weight: 300;
     letter-spacing: .9rem;
     font-family: 'Orbitron', cursive;
-    color: rgb(215, 51, 215);
+    color: rgb(47, 231, 225);
  }
  
  
@@ -53,7 +53,7 @@ h1{
     margin: 3%;
     padding: 8px;
     opacity: 90%;
-    background-color: rgb(177, 61, 231);
+    background-color: rgb(186, 89, 231);
     text-align: left;    
 }
 
@@ -61,7 +61,7 @@ h1{
     margin: 3%;
     padding: 8px;
     opacity: 90%;
-    background-color: rgb(149, 168, 54);
+    background-color: rgb(71, 173, 166);
     text-align: left;    
 }
 .textoBlanco{
@@ -94,6 +94,13 @@ h1{
     margin-right: auto;
   }
 
+ 
+  .unordered-list li{
+    list-style:armenian;
+    font-size: medium;
+    margin-left: 6%;
+    
+  }
 
 
 
@@ -121,9 +128,17 @@ h1{
 
     .imagen-articulo{
        
-        width: 380px; height: 410px; object-fit: cover;
+        width: 360px; height: 400px; object-fit: cover;
         
       }
+
+      .unordered-list li{
+        list-style:armenian;
+        font-size: small;
+        margin-left: 6.5%;
+               
+      }
+    
     
     }
 
