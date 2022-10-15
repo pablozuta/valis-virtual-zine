@@ -54,12 +54,12 @@
 
   <div class="menu-capitulos" style="width:80%;">
 
-  <h3><a href="#chapter-1">CHAPTER 1: Introduction to APIs</a></h3>
-  <h3><a href="#chapter-2">CHAPTER 2: API Management</a></h3>
-  <h3><a href="#chapter-3">CHAPTER 3: Designing a RESTful API Interface</a></h3>
-  <h3><a href="#chapter-4">CHAPTER 4: API Documentation</a></h3>
-  <h3><a href="#chapter-5">CHAPTER 5: API Patterns</a></h3>
-     
+    <h3><a href="#chapter-1">CHAPTER 1: Introduction to APIs</a></h3>
+    <h3><a href="#chapter-2">CHAPTER 2: API Management</a></h3>
+    <h3><a href="#chapter-3">CHAPTER 3: Designing a RESTful API Interface</a></h3>
+    <h3><a href="#chapter-4">CHAPTER 4: API Documentation</a></h3>
+    <h3><a href="#chapter-5">CHAPTER 5: API Patterns</a></h3>
+
   </div>
 
   <div class="texto" id="chapter-1">
@@ -165,8 +165,8 @@
       From a governance perspective, SOA is managed through a governance model that
       is more formal, heavyweight, and prescriptive in nature.
 
-      <h3> The API Value Chain</h3>
-      <p class="pText">The business asset marks the beginning of the API value chain.
+    <h3> The API Value Chain</h3>
+    <p class="pText">The business asset marks the beginning of the API value chain.
       The value of the asset determines the success of the API. Exposing the assets to
       others should also benefit the owner.
       Once an asset has been identified, the next step is to create an API to expose the
@@ -178,7 +178,9 @@
     <p class="pText">APIs form the foundation of digital business.
       As APIs help to drive business agility, growth and open new channels for revenue,
       there are many business models for API exposure.</p>
-    <center><button class="top-button"><a href="#top">Top</a></button></center>
+    <center>
+      <button class="top-button"><a href="#top">TOP</a></button>
+    </center>
 
   </div>
 
@@ -328,18 +330,19 @@
       and seek help regarding API usage. The issues can be reported through the developer
       portal. The API management platform should provide the capability to integrate defects
       reporting and issue management capabilities in existing systems within the enterprise.</p>
-      <center><button class="top-button"><a href="#top">Top</a></button></center>
-    
+    <center><button class="top-button"><a href="#top">TOP</a></button></center>
+
   </div>
 
   <div class="textoBlanco" id="chapter-3">
 
     <h2>CHAPTER 3: Designing a RESTful API Interface</h2>
 
-    
+
     <p class="pText">REST is an architectural style. It is not any strict standard but provides certain guidelines
       and constraints to be followed. Roy Fielding originally described these constraints in his
-      doctoral dissertation and coined the name Representational State Transfer.REST relies on stateless, cacheable, and client-server communication protocols such
+      doctoral dissertation and coined the name Representational State Transfer.REST relies on stateless, cacheable, and
+      client-server communication protocols such
       as HTTP. By following the principles of REST and applying it to stateless protocols such as
       HTTP, developers can build API interfaces that can be used from any device or operating
       system.</p>
@@ -355,7 +358,7 @@
       <li>Cache</li>
       <li>Layered system</li>
       <li>Code on demand</li>
-     </ul>
+    </ul>
     <h3>Uniform Interface</h3>
     <p class="pText">A uniform interface helps to define the communication contract between client and
       the server. It helps to decouple the architecture. Client and server applications can be
@@ -403,21 +406,24 @@
       A uniform interface is one of the fundamental principles of the RESTful architectural
       style. Web components interoperate consistently within the uniform interface’s four
       constraints, which Fielding identified as follows:</p>
-     
-      <ul class="unordered-list">
-        <li>Identification of resources</li>
-        <li>Manipulation of resources through representation</li>
-        <li>Self-descriptive messages</li>
-        <li>Hypermedia as the engine of application state (HATEOS)</li>
-      </ul>
-      <img src="https://cdna.artstation.com/p/assets/images/images/015/674/404/large/ella-moon-.jpg?1549212059&dl=1" alt="gato4" class="imagen-articulo">
+
+    <ul class="unordered-list">
+      <li>Identification of resources</li>
+      <li>Manipulation of resources through representation</li>
+      <li>Self-descriptive messages</li>
+      <li>Hypermedia as the engine of application state (HATEOS)</li>
+    </ul>
+    <img src="https://cdna.artstation.com/p/assets/images/images/015/674/404/large/ella-moon-.jpg?1549212059&dl=1"
+      alt="gato4" class="imagen-articulo">
     <h3>Identification of Resources</h3>
     <p class="pText">Before we can identify a resource, we need to understand what a resource is.
       A resource is any web-based concept that can be referenced by a unique identifier and
       manipulated via the uniform interface. While designing a REST API for a travel portal,
       your resources could be customer, reservation, ticket, hotel, flight, bus, car, and so forth.
-      A resource can be a single entity or a collection of entities.A resource is identified by a URI (Uniform Resource Identifier). A URI provides the
-      name and the network address of a resource.The resources themselves are conceptually separate from the representations that
+      A resource can be a single entity or a collection of entities.A resource is identified by a URI (Uniform Resource
+      Identifier). A URI provides the
+      name and the network address of a resource.The resources themselves are conceptually separate from the
+      representations that
       are returned to the client. For example, the resource may be residing in some database,
       but when the server responds to a request for a resource, it does not send the database
       itself; rather it responds with some representation of the resource that represents a record
@@ -443,7 +449,8 @@
     <p class="pText">A resources’ state information may include links to other resources. These links provide
       information on what to do next and how to traverse through other related resources in
       a meaningful manner; for example, after getting information about the account, you
-      may want to deposit, withdraw, or transfer money.The presence or absence of a link in a resource representation is an important part of
+      may want to deposit, withdraw, or transfer money.The presence or absence of a link in a resource representation is
+      an important part of
       resource’s current state.
       While designing a REST API interface, you should keep all of these constraints in
       mind. The next few sections look at how to build a REST API interface by following these
@@ -451,7 +458,8 @@
     <h3>Resource Identifier Design Using URIs</h3>
     <p class="pText">In a RESTful API, designing the resource is one of the most important tasks for its success.
       A well-designed resource makes the API intuitive, simple to understand, and easy to use.
-      Let’s look at some of the best practices for designing RESTful APIs.Every resource should have a meaningful name to identify itself. Name a resource using
+      Let’s look at some of the best practices for designing RESTful APIs.Every resource should have a meaningful name
+      to identify itself. Name a resource using
       a noun as opposed to a verb or an action. The URI for the resource should refer to a
       thing rather than an action. Also CRUD function names should not be used in the URI
       or resource names; for example, while designing resource for a customer’s entity, the
@@ -470,41 +478,41 @@
     <p class="pText">The following are some of the best practices for identifying resources for RESTful API
       design.</p>
 
-      <ul class="unordered-list">
-        <li>Resources should not be too fine grained because they lead to
-          chatty communication between the consumer and the provider.
-          Chatty communication degrades overall performance of the app
-          that is using the API; hence, it should be avoided.</li>
-        <li>Resources should not be too course grained because this leads to
-          APIs that are too difficult to use and maintain.</li>
-        <li>Resources should be designed such that they do not lead to
-          migration of control flow business logic to the API consumer side;
-          for example, if updates to the customer information requires
-          multiple fields to be updated in a specific sequence that depends
-          on some logic, then the API to update the customer information
-          should be designed so that the client is not responsible for
-          executing the required flow logic. The responsibility of executing
-          the logic should lie with the resource server hosting the resource.
-          Shifting the logic to the consumer side has the risk of putting the
-          resource data in an inconsistent state, especially in the event of
-          failure. Fine-grained APIs that perform CRUD operations may
-          put the business logic on the client side, creating tight coupling
-          between the API consumer and the provider. Any change in
-          business logic at the provider end would require corresponding
-          changes on the API consumer side. They may not be possible
-          in many cases, where consumers do not want to make frequent
-          changes to the applications on their side.</li>
-        <li>Resource selection should be independent of the underlying
-          domain implementation details. Hence, even a business
-          process can be modelled as a resource if the process involves
-          the operation of multiple low-level resources. For example, the
-          process of setting up a customer in a bank may be modelled as
-          a resource. So there can be a resource created for a customer
-          account setup—such as /accountSetup—that needs to call
-          operations on related resources for entities such as customer and
-          account. By modeling a business process as a resource, the API
-          consumer does not need to apply the business logic in the code.</li>
-      </ul>
+    <ul class="unordered-list">
+      <li>Resources should not be too fine grained because they lead to
+        chatty communication between the consumer and the provider.
+        Chatty communication degrades overall performance of the app
+        that is using the API; hence, it should be avoided.</li>
+      <li>Resources should not be too course grained because this leads to
+        APIs that are too difficult to use and maintain.</li>
+      <li>Resources should be designed such that they do not lead to
+        migration of control flow business logic to the API consumer side;
+        for example, if updates to the customer information requires
+        multiple fields to be updated in a specific sequence that depends
+        on some logic, then the API to update the customer information
+        should be designed so that the client is not responsible for
+        executing the required flow logic. The responsibility of executing
+        the logic should lie with the resource server hosting the resource.
+        Shifting the logic to the consumer side has the risk of putting the
+        resource data in an inconsistent state, especially in the event of
+        failure. Fine-grained APIs that perform CRUD operations may
+        put the business logic on the client side, creating tight coupling
+        between the API consumer and the provider. Any change in
+        business logic at the provider end would require corresponding
+        changes on the API consumer side. They may not be possible
+        in many cases, where consumers do not want to make frequent
+        changes to the applications on their side.</li>
+      <li>Resource selection should be independent of the underlying
+        domain implementation details. Hence, even a business
+        process can be modelled as a resource if the process involves
+        the operation of multiple low-level resources. For example, the
+        process of setting up a customer in a bank may be modelled as
+        a resource. So there can be a resource created for a customer
+        account setup—such as /accountSetup—that needs to call
+        operations on related resources for entities such as customer and
+        account. By modeling a business process as a resource, the API
+        consumer does not need to apply the business logic in the code.</li>
+    </ul>
 
 
     <h3>URI Path Design</h3>
@@ -523,14 +531,15 @@
       (URI) is a compact string of characters for identifying an abstract or physical resource.”
       This identifier can be realized in one of two ways: as a Uniform Resource Locator (URL)
       or a Uniform Resource Name (URN).</p>
-      <center><button class="top-button"><a href="#top">Top</a></button></center>
-     </div>
+    <center><button class="top-button"><a href="#top">TOP</a></button></center>
+  </div>
 
   <div class="texto" id="chapter-4">
 
     <h2>CHAPTER 4: API Documentation</h2>
 
-    <img src="https://i.pinimg.com/originals/e6/4e/4a/e64e4af22d106f3edd7604570769c461.gif" alt="gato4" class="imagen-articulo">
+    <img src="https://i.pinimg.com/originals/e6/4e/4a/e64e4af22d106f3edd7604570769c461.gif" alt="gato4"
+      class="imagen-articulo">
 
     <p class="pText">Documenting a REST API is important for its successful adoption. APIs expose data
       and services that consumers want to use. An API should be designed with an interface
@@ -544,20 +553,21 @@
       about its functionality, what it is supposed to do, how it is to be used, its security,
       limitations, error scenarios, and so forth. As an API provider, you have gradually learned
       everything about the API through various discussions, documentation, and references.
-      However, this is not the case for the consumers of your API.As enterprises move along in the digital transformation journey, there has been
+      However, this is not the case for the consumers of your API.As enterprises move along in the digital
+      transformation journey, there has been
       exponential growth in public and private APIs. In this competitive world, it is very likely
       that the data and services exposed by your API may also be exposed by another API
       provider.The API documentation should</p>
 
 
-      <ul class="unordered-list">
-        <li>Get users started quickly</li>
-        <li>Include useful and relevant information</li>
-        <li>Provide sample code</li>
-        <li>Document a list of REST endpoints</li>
-        <li>Document the message payload</li>
-        <li>Provide Response status code and error messages</li>
-      </ul>
+    <ul class="unordered-list">
+      <li>Get users started quickly</li>
+      <li>Include useful and relevant information</li>
+      <li>Provide sample code</li>
+      <li>Document a list of REST endpoints</li>
+      <li>Document the message payload</li>
+      <li>Provide Response status code and error messages</li>
+    </ul>
 
 
     <h3>Audience for API Documentation</h3>
@@ -578,7 +588,8 @@
       out of sync if there are enhancements to the API interface in the next version, especially
       if the process does not enforce regeneration or validation of the API document. Similarly,
       with a top-down approach, you may start with the API documentation and manually
-      create the skeleton of the API interface according to the defined interface.There are many competing tools for API documentation. Some of them are in a fairly
+      create the skeleton of the API interface according to the defined interface.There are many competing tools for API
+      documentation. Some of them are in a fairly
       matured state, while others are still evolving. The next few sections look at the Swagger,
       RAML, and API Blueprint frameworks so that you can see how they are used to document
       an API interface. The tools that they provide are also discussed.</p>
@@ -586,9 +597,11 @@
     <p class="pText">Swagger is one of the most popular API documentation frameworks. It provides a
       standard, language-agnostic way of defining a REST API interface. This approach allows
       the client to understand the capabilities of the REST service without any prior access to the
-      service implementation code or network inspection.An API’s Swagger specifications are documented in JSON or YAML format. Swaggerenabled
+      service implementation code or network inspection.An API’s Swagger specifications are documented in JSON or YAML
+      format. Swaggerenabled
       APIs expose JSON files that adhere to the specifications. The API specification
-      can be a manually generated static file or automatically generated from the application.The Swagger UI provides a framework to dynamically generate beautiful interactive
+      can be a manually generated static file or automatically generated from the application.The Swagger UI provides a
+      framework to dynamically generate beautiful interactive
       documentation from a Swagger-compliant API. It is an independent collection of HTML,
       CSS, and JavaScript that can be hosted on any server. It can be used by consumers to
       explore and interact with the API and understand its behavior.</p>
@@ -610,7 +623,7 @@
       been efforts from various corners to create specs that address competitors’ shortcomings.
       As a result, many competing specs are available today from various vendors. These are in
       various levels of maturity.</p>
-      <center><button class="top-button"><a href="#top">Top</a></button></center>
+    <center><button class="top-button"><a href="#top">TOP</a></button></center>
   </div>
 
 
@@ -621,87 +634,87 @@
 
   <div class="textoBlanco" id="chapter-5">
     <h2>CHAPTER 5: API Patterns</h2>
-   
+
     <p class="pText">APIs should be designed for longevity. Any change to an API carries the risk of breaking
       the client’s application code. Frequent changes to an API frustrate the developers and
       the consumers using it. Building APIs from robust and proven patterns fosters a happy
       developer community and saves the company a lot of money. This chapter looks at
       some of the API design principles and patterns that have stood the test of time and make
       developers happy.</p>
-      <img src="https://c.tenor.com/jIfa4bdSdxAAAAAC/cyberpunk.gif" alt="cyberpunk gif 2" class="imagen-articulo">
+    <img src="https://c.tenor.com/jIfa4bdSdxAAAAAC/cyberpunk.gif" alt="cyberpunk gif 2" class="imagen-articulo">
     <h3>Best Practices for Building a Pragmatic RESTful API</h3>
     <p class="pText">APIs are the face of your enterprise. They provide users with access to enterprise data,
       services, and assets. Hence, while security should be ingrained in it, the API interface
       should be simple and elegant to attract developers. It should be intuitive and developerfriendly
       to make adoption easy and pleasant.</p>
-      <ul class="unordered-list">
-        <li>Design APIs with RESTful URLs. Design an API based on the
-          logical grouping of identified resources. The API URL should
-          point to either a collection of resources/subresources or an
-          individual entity within the collection.</li>
-        <li>Use HTTP verbs for CRUD action on resources. Use the HTTP
-          verbs to perform CRUD action on the resources. Use POST
-          to create a new resource, GET to read, PUT to update, and
-          DELETE to delete a resource. Additionally, you may consider
-          providing support for the PATCH verb in the API resource for
-          partial updates.</li>
-        <li>Use operation in the URL when HTTP verb cannot map to
-          the action. Often, an action on a resource cannot be directly
-          mapped to an HTTP verb. For example, actions such as register,
-          activate, and so forth, cannot be directly mapped to an HTTP
-          verb.</li>
-        <li>Use SSL/TLS for all communications with REST APIs. RESTful
-          APIs expose enterprise data and assets. These can be accessed
-          from within the company or from outside the firewall over the
-          Internet from anywhere. This poses a security threat to the
-          data transferred over the network.</li>
-        <li>Do not redirect from non-SSL API endpoints to SSL endpoints.
-          This is a practice to always avoid when designing REST APIs.
-          Malicious clients may gain access to actual secured and encrypted
-          API resources through such redirections.</li>
-        <li>API versions. Versioning iterates and improves APIs by
-          providing a smooth transition path. It supports multiple versions
-          of the APIs simultaneously and provides time for clients to
-          upgrade to new version and provider to retire the old version.</li>
-          <li>Design the API interface to support filtering on the result
-            set. The response to a GET request for an API resource may
-            sometimes be quite large. Displaying this large response in
-            the consumer app may be quite challenging considering the
-            limited form factor and processing power on the device.</li>
-          <li>Design the API to support pagination. Pagination is yet another
-            feature that is useful in handling large responses from an API.
-            Even the filtered response from the back-end service for an API
-            may contain hundreds of records. In such a scenario, it makes
-            sense to display only ten of them on a page in the consumer app
-            and provide a link to the next page with the next set of records.</li>
-          <li>Return resource representation in response to creating and
-            updating. The response for POST, PUT, and PATCH operations
-            results in creating and/or updating a resource. The API response
-            payload for these methods should include metainformation
-            such as 'created_at' or 'updated_at' along with the created
-            or updated representation of the resource.</li>
-            <li>Use HTTP headers to specify the media type for the message
-              payload. When sending a request or a response, include the
-              'Content-Type' header to specify the content type for the
-              message payload. This helps the message recipient to easily
-              identify the parser to be used for processing the message.</li>
-            <li>Use HTTP headers to support caching. HTTP provides builtin
-              features to support caching. HTTP provides a number of
-              useful headers to efficiently communicate caching information.
-              The 'ETag' header contains a hashed value of the resource
-              information.</li>
-            <li>Secure APIs using authentication information in HTTP
-              header. APIs exposing data and assets should always be secured.
-              Authentication credentials should be included in the HTTP
-              Authorization header. Since REST services are stateless, cookies
-              should not be used. Session information if any should be passed in
-              custom HTTP headers.</li>
-              <li>Handle Errors using HTTP Status code and appropriate error
-                messages. In case of errors, APIs should respond with useful
-                error messages in a consumable format. Appropriate HTTP
-                error response codes in 4XX or 5XX series should be used.</li>
-             
-      </ul>
+    <ul class="unordered-list">
+      <li>Design APIs with RESTful URLs. Design an API based on the
+        logical grouping of identified resources. The API URL should
+        point to either a collection of resources/subresources or an
+        individual entity within the collection.</li>
+      <li>Use HTTP verbs for CRUD action on resources. Use the HTTP
+        verbs to perform CRUD action on the resources. Use POST
+        to create a new resource, GET to read, PUT to update, and
+        DELETE to delete a resource. Additionally, you may consider
+        providing support for the PATCH verb in the API resource for
+        partial updates.</li>
+      <li>Use operation in the URL when HTTP verb cannot map to
+        the action. Often, an action on a resource cannot be directly
+        mapped to an HTTP verb. For example, actions such as register,
+        activate, and so forth, cannot be directly mapped to an HTTP
+        verb.</li>
+      <li>Use SSL/TLS for all communications with REST APIs. RESTful
+        APIs expose enterprise data and assets. These can be accessed
+        from within the company or from outside the firewall over the
+        Internet from anywhere. This poses a security threat to the
+        data transferred over the network.</li>
+      <li>Do not redirect from non-SSL API endpoints to SSL endpoints.
+        This is a practice to always avoid when designing REST APIs.
+        Malicious clients may gain access to actual secured and encrypted
+        API resources through such redirections.</li>
+      <li>API versions. Versioning iterates and improves APIs by
+        providing a smooth transition path. It supports multiple versions
+        of the APIs simultaneously and provides time for clients to
+        upgrade to new version and provider to retire the old version.</li>
+      <li>Design the API interface to support filtering on the result
+        set. The response to a GET request for an API resource may
+        sometimes be quite large. Displaying this large response in
+        the consumer app may be quite challenging considering the
+        limited form factor and processing power on the device.</li>
+      <li>Design the API to support pagination. Pagination is yet another
+        feature that is useful in handling large responses from an API.
+        Even the filtered response from the back-end service for an API
+        may contain hundreds of records. In such a scenario, it makes
+        sense to display only ten of them on a page in the consumer app
+        and provide a link to the next page with the next set of records.</li>
+      <li>Return resource representation in response to creating and
+        updating. The response for POST, PUT, and PATCH operations
+        results in creating and/or updating a resource. The API response
+        payload for these methods should include metainformation
+        such as 'created_at' or 'updated_at' along with the created
+        or updated representation of the resource.</li>
+      <li>Use HTTP headers to specify the media type for the message
+        payload. When sending a request or a response, include the
+        'Content-Type' header to specify the content type for the
+        message payload. This helps the message recipient to easily
+        identify the parser to be used for processing the message.</li>
+      <li>Use HTTP headers to support caching. HTTP provides builtin
+        features to support caching. HTTP provides a number of
+        useful headers to efficiently communicate caching information.
+        The 'ETag' header contains a hashed value of the resource
+        information.</li>
+      <li>Secure APIs using authentication information in HTTP
+        header. APIs exposing data and assets should always be secured.
+        Authentication credentials should be included in the HTTP
+        Authorization header. Since REST services are stateless, cookies
+        should not be used. Session information if any should be passed in
+        custom HTTP headers.</li>
+      <li>Handle Errors using HTTP Status code and appropriate error
+        messages. In case of errors, APIs should respond with useful
+        error messages in a consumable format. Appropriate HTTP
+        error response codes in 4XX or 5XX series should be used.</li>
+
+    </ul>
 
     <h3>API Management Patterns</h3>
     <p class="pText">Enterprise services provide access to assets and legacy systems. SOAP and REST APIs
@@ -711,9 +724,11 @@
       help address different challenges.</p>
     <h3>API Facade Pattern</h3>
     <p class="pText">The API facade pattern helps the API team create developer-friendly API designs and
-      connect to complex enterprise legacy record systems.Back-end and internal system of records are often quite complex. They could be
+      connect to complex enterprise legacy record systems.Back-end and internal system of records are often quite
+      complex. They could be
       built using variety of technologies and sometimes even legacy ones. These are difficult to
-      change due to the strong dependencies built over time and the complexity involved.Therefore flexibility and agility needed for the digital business becomes
+      change due to the strong dependencies built over time and the complexity involved.Therefore flexibility and
+      agility needed for the digital business becomes
       difficult to achieve. Creating an API for a single system of record may still be possible, but
       the real problem is in creating an API for a group of complementary systems that needs
       to be used to make an API really valuable to the developer. In this situation, API facade
@@ -727,10 +742,12 @@
       orchestration, data transformation and normalization, security, service connectivity, and
       retry mechanisms. This is indeed an overhead on the client app, considering the limited
       processing power available on the mobile devices. It is helpful for the developer building
-      the app, if all these tasks can be off-loaded somewhere.Implementing the API composition pattern in the API facade layer can be a solution
+      the app, if all these tasks can be off-loaded somewhere.Implementing the API composition pattern in the API facade
+      layer can be a solution
       to this problem. With API composition, the developers can concentrate on the UI and
       business functionality. It makes the communication less chatty with reduced network
-      calls between the app and the back-end services.Using an API gateway to implement the API facade pattern for composition is a
+      calls between the app and the back-end services.Using an API gateway to implement the API facade pattern for
+      composition is a
       common practice. An API gateway is a server that acts as a single point of entry into
       the system. It encapsulates the internal system architecture and provides an API that is
       customized for the client.</p>
@@ -745,7 +762,8 @@
     <h3>Two-Phase Transaction Management</h3>
     <p class="pText">In a two-phase transaction, the transaction coordinator prepares the participating
       resources for a transaction in the first step. If the first step is successful, the commit is
-      issued to the participating resources in the second step.Exposing each transaction phase as an API and expecting the client app to coordinate
+      issued to the participating resources in the second step.Exposing each transaction phase as an API and expecting
+      the client app to coordinate
       the transaction, and roll over in case of failure, is an over kill. Managing all transaction
       from the client app is going to result in a chatty conversation. The complex processing
       logic in the app for transaction coordination and management definitely yields a poor app
@@ -775,7 +793,7 @@
       parameters for routing may be present in the request header or the message payload. In
       the API facade, these parameters are extracted and inspected to determine the back-end
       endpoint to which the request should be routed.</p>
-      
+
     <h3>API Throttling</h3>
     <p class="pText">When an enterprise opens their API to the external world, it is expected to see an increase
       in the API traffic. Developers use these APIs to build new innovative apps. As more apps
@@ -786,35 +804,35 @@
       load. To maintain the performance and overall stability, it is important to maintain the
       overall traffic within the capacity limits of the back-end system by throttling the API.</p>
 
-      <ul class="unordered-list">
-        <li>Spike Arrest: With Spike Arrest, you can detect sudden
-          unexpected changes to the traffic pattern. Applying a Spike
-          Arrest policy smooths out the traffic by uniformly distributing the
-          traffic across each smaller interval. For example, if the set spike
-          arrest limit is 60 per minute, then only one request is allowed
-          every second. If in any second there is more than one request,
-          they would all be throttled. Similarly, if the spike arrest is 200
-          per second, then only one request is allowed per 5 milliseconds.
-          If there is more than one request in any 5-millisecond interval,
-          subsequent requests is throttles. The value of the spike arrest
-          should be calculated based on the capacity of the back-end
-          services. The limits should be configured for shorter intervals
-          such as sec or minutes. This feature protects the back-end
-          services against sudden traffic burst coming from some malicious
-          users or apps.</li>
-        <li>Rate Limit or Quota: With a Rate Limiting approach (also
-          sometime referred to as Quota), the requests are throttled based
-          on the originating app or user, region of origination, time of the
-          day and various other factors over a period of time. The request
-          within the specified limit is routed successfully to the target
-          system. Those beyond the limit are rejected.</li>
-        <li>Concurrent back-end connections: Sometimes legacy backend
-          systems might have the strict restrictions on the number
-          of connections that can be made. By implementing throttling
-          using concurrent connections, you can limit the number of
-          simultaneous connections that can be made from the API to
-          the back-end services at any given point of time.</li>
-          </ul>
+    <ul class="unordered-list">
+      <li>Spike Arrest: With Spike Arrest, you can detect sudden
+        unexpected changes to the traffic pattern. Applying a Spike
+        Arrest policy smooths out the traffic by uniformly distributing the
+        traffic across each smaller interval. For example, if the set spike
+        arrest limit is 60 per minute, then only one request is allowed
+        every second. If in any second there is more than one request,
+        they would all be throttled. Similarly, if the spike arrest is 200
+        per second, then only one request is allowed per 5 milliseconds.
+        If there is more than one request in any 5-millisecond interval,
+        subsequent requests is throttles. The value of the spike arrest
+        should be calculated based on the capacity of the back-end
+        services. The limits should be configured for shorter intervals
+        such as sec or minutes. This feature protects the back-end
+        services against sudden traffic burst coming from some malicious
+        users or apps.</li>
+      <li>Rate Limit or Quota: With a Rate Limiting approach (also
+        sometime referred to as Quota), the requests are throttled based
+        on the originating app or user, region of origination, time of the
+        day and various other factors over a period of time. The request
+        within the specified limit is routed successfully to the target
+        system. Those beyond the limit are rejected.</li>
+      <li>Concurrent back-end connections: Sometimes legacy backend
+        systems might have the strict restrictions on the number
+        of connections that can be made. By implementing throttling
+        using concurrent connections, you can limit the number of
+        simultaneous connections that can be made from the API to
+        the back-end services at any given point of time.</li>
+    </ul>
     <h3>Caching</h3>
     <p class="pText">Caching pattern can be used within an API gateway to cache backend responses or
       any information required for processing the request. When a client makes the same
@@ -834,7 +852,8 @@
       help locate the source of the issue. It should also provide information about the date/time
       of the issue, description of the issue with error codes and messages and a correlation ID
       to relate it to events in other applications of the system.</p>
-      <img src="https://www.icegif.com/wp-content/uploads/2022/03/icegif-83.gif" alt="cyberpunk gif 1" class="imagen-articulo">
+    <img src="https://www.icegif.com/wp-content/uploads/2022/03/icegif-83.gif" alt="cyberpunk gif 1"
+      class="imagen-articulo">
     <h3>API Analytics</h3>
     <p class="pText">Implementing APIs for digital transformation is not enough. You need visibility into
       your API program to measure the success and make strategic investments. API analytics
@@ -864,41 +883,41 @@
     <p class="pText">Hackers can attack to get access to the system, steal valuable information, or even bring
       down the system that impacts your business. The following are the most common forms
       of attack on APIs.</p>
-      <ul class="unordered-list">
-        <li>DoS attacks: Malicious users flood your system with high-volume
-          API traffic that the back-end systems cannot handle, bringing it to
-          a halt.</li>
-        <li>Scripting attacks: In this kind of attack, attackers inject malicious
-          code into the system to get access and possibly tamper back-end
-          data and assets. The malicious code can be an SQL statement,
-          XPath or XQuery statement, or some script that tries to exploit
-          design flows in the system to get access to back-end data.</li>
-        <li>Eavesdropping: In this kind of attack, the hacker gets access to an
-          API request or response while the data is in transit over a nonsecure
-          API communication channel. He can then manipulate the
-          message and send it to the ultimate recipient.</li>
-        <li>Session attack: In this kind of attack, the hackers gain access to
-          the session ID used by a user or app. This information is then
-          used for personification and access to the user’s account and
-          resources. In this common form of attack, an app makes an API
-          call and passes the credentials or session information in the
-          header, that can provide access to the underlying assets. The risk
-          is worse in scenarios that use a multiparty authentication scheme,
-          such as OAuth, to grant permissions to a third party to access to
-          access their private data.</li>
-        <li>Cross-site scripting (XSS): This is a special form of
-          scripting attack that takes advantage of known vulnerabilities
-          in a web site or web application. An attacker injects a malicious
-          link or code that is executed on the victim’s web browser. This
-          form of attack bypasses the same-origin policy that requires
-          everything on a web page to come from the same source. When a
-          same-origin policy is not enforced, the attacker can inject a script
-          or modify the web page to achieve their purpose. An XSS attack
-          delivers tainted content to the API from a trusted source that has
-          permissions to the system. Hence, the API must protect itself by
-          validating the 'Origin' header in the request payload to check
-          for the origin before allowing access to back-end resources.</li>
-      </ul>
+    <ul class="unordered-list">
+      <li>DoS attacks: Malicious users flood your system with high-volume
+        API traffic that the back-end systems cannot handle, bringing it to
+        a halt.</li>
+      <li>Scripting attacks: In this kind of attack, attackers inject malicious
+        code into the system to get access and possibly tamper back-end
+        data and assets. The malicious code can be an SQL statement,
+        XPath or XQuery statement, or some script that tries to exploit
+        design flows in the system to get access to back-end data.</li>
+      <li>Eavesdropping: In this kind of attack, the hacker gets access to an
+        API request or response while the data is in transit over a nonsecure
+        API communication channel. He can then manipulate the
+        message and send it to the ultimate recipient.</li>
+      <li>Session attack: In this kind of attack, the hackers gain access to
+        the session ID used by a user or app. This information is then
+        used for personification and access to the user’s account and
+        resources. In this common form of attack, an app makes an API
+        call and passes the credentials or session information in the
+        header, that can provide access to the underlying assets. The risk
+        is worse in scenarios that use a multiparty authentication scheme,
+        such as OAuth, to grant permissions to a third party to access to
+        access their private data.</li>
+      <li>Cross-site scripting (XSS): This is a special form of
+        scripting attack that takes advantage of known vulnerabilities
+        in a web site or web application. An attacker injects a malicious
+        link or code that is executed on the victim’s web browser. This
+        form of attack bypasses the same-origin policy that requires
+        everything on a web page to come from the same source. When a
+        same-origin policy is not enforced, the attacker can inject a script
+        or modify the web page to achieve their purpose. An XSS attack
+        delivers tainted content to the API from a trusted source that has
+        permissions to the system. Hence, the API must protect itself by
+        validating the 'Origin' header in the request payload to check
+        for the origin before allowing access to back-end resources.</li>
+    </ul>
 
 
     <h3>API Risk Mitigation Best Practices</h3>
@@ -915,11 +934,13 @@
     <p class="pText">Every app is associated with a unique API key. Hence, API key validation on
       an API management layer can help identify the app and thus control access to the APIs.
       Once an app has been identified and validated, the user using the app should be verified
-      to validate the end user permissions to access an API resource.API keys identify the app. It is the responsibility of the app to store them securely
+      to validate the end user permissions to access an API resource.API keys identify the app. It is the responsibility
+      of the app to store them securely
       and protect them from misuse. The app should encrypt the key and store it in a secure
       vault to prevent any misuse. HMAC-based encryption can be used for encrypting API
       keys. Also keys should be transmitted in encrypted form over the network using SSL for
-      any authentication between the app and the API gateway.OAuth should be used as a mechanism to provide authorization to a third-party
+      any authentication between the app and the API gateway.OAuth should be used as a mechanism to provide
+      authorization to a third-party
       application for access to an end user resource on behalf of them. OAuth helps with
       granting authorization without the need to share user credentials. OAuth 2.0 uses SSL for
       all of its communications. Hence, all user and app information in the OAuth dance with
@@ -935,10 +956,12 @@
       validation policies or threat detection policies attached in the request-processing pipeline
       can mitigate the risk of SQL injections, malicious code injection, and business logic or
       parameter attacks. CORS header validation protects against XSS attacks. IP whitelisting is
-      another approach to reduce risk from untrusted sources.Preventing APIs against denial-of-service attacks is another important security
+      another approach to reduce risk from untrusted sources.Preventing APIs against denial-of-service attacks is
+      another important security
       consideration. Most API management platforms provide protection against DoS attacks
       using Spike Arrest and Quota policies. The Spike Arrest policy identifies unexpected surge
-      in the API traffics and reject all requests exceeding the configured limit.Alerts should be sent if APIs are getting overloaded or any
+      in the API traffics and reject all requests exceeding the configured limit.Alerts should be sent if APIs are
+      getting overloaded or any
       suspicious pattern of API calls is detected. Using rate limits and quota policies alongs
       with a licensing model that establishes a contractual obligation between the API provider
       and the consumer app and enforces payments for violation of contracts, can minimize
@@ -962,7 +985,8 @@
       API usage patterns. An API provider is interested in knowing which is their most popular
       API operation, who is the most popular user of the API, what is the rate of growth of API
       consumers, what is the traffic pattern over a period of time. An insight into all of this
-      information helps with planning the API extensions to strengthen API security.Logging and Auditing is also one of the major regulatory compliance
+      information helps with planning the API extensions to strengthen API security.Logging and Auditing is also one of
+      the major regulatory compliance
       requirement. Various national and industry-specific laws require minimum logging.
       Regulatory compliance requirements in financial industry mandate that you log certain
       API traffic information and make it available as part of the audit and compliance process.</p>
@@ -990,19 +1014,19 @@
       specification is to protect card holder data and give confidence to the consumers that
       their sensitive information would not be misused. The following are the some of the
       important guidelines for PCI compliance.</p>
-      <ul class="unordered-list">
-        <li>Build and maintain a secure firewall. Do not use any default
-          passwords.</li>     
+    <ul class="unordered-list">
+      <li>Build and maintain a secure firewall. Do not use any default
+        passwords.</li>
 
-        <li>Protect stored data and encrypt sensitive data in transit.</li>
-        <li>All application and systems should be secured and protected
-          against unauthorized access using strong access control
-          measures.</li>
-        <li>Anti-virus and vulnerability management programs should be
-          kept updated.</li>
-        <li>Monitor network access and test systems regularly.</li>
-        <li>Maintain an information security policy.</li>
-      </ul>
+      <li>Protect stored data and encrypt sensitive data in transit.</li>
+      <li>All application and systems should be secured and protected
+        against unauthorized access using strong access control
+        measures.</li>
+      <li>Anti-virus and vulnerability management programs should be
+        kept updated.</li>
+      <li>Monitor network access and test systems regularly.</li>
+      <li>Maintain an information security policy.</li>
+    </ul>
 
 
     <h3>API Deployment Patterns</h3>
@@ -1018,52 +1042,52 @@
       on a public cloud, such as AWS or Azure. For example, the Apigee cloud instance is
       hosted on AWS. Cloud deployment provides customers with seamless product upgrades
       and improves the pace of innovation.</p>
-      <ul class="unordered-list">
-        <li>Higher reliability and availability: Cloud platforms provide
-          clustered environments that are distributed across multiple data
-          centers and regions. This mitigates the risk of data center and
-          network outages, and increases the reliability and availability of
-          the platform. The API platform vendor handles traffic fluctuations
-          and makes capacity adjustments to meet the guaranteed SLA.</li>
-        <li>Faster time to market: The cloud instances of the API platforms
-          can be spun off almost immediately by the API vendors. This
-          saves time and hassle of hardware procurement, setup, and
-          configuration. The cloud instances are up and running very
-          quickly thus reducing the overall time to market for the API
-          program.</li>
-        <li>Reduced capital and operational expenditure: Cloud
-          deployments are generally available in a subscription model. You
-          pay by usage like number of API calls. This avoids upfront capital
-          expenditures and reduces ongoing in-house operational costs.</li>
-        <li>Reduced management overhead: Letting the API vendor focus
-          on the data center infrastructure helps enterprises focus on
-          building their API services. The API platform provider takes
-          care of management over heads of running and managing
-          the data center. They address all availability and performance
-          management of the underlying infrastructure. Software updates
-          and fixes are rolled out seamlessly by the vendors. The API
-          provider can focus on creating the API and its back end.</li>
-        <li>Increased scalability and agility: The licensing for the cloud
-          platforms are generally by API traffic volume. If the traffic
-          increases, API providers only pay additional licensing fee for
-          the increased traffic. They do not need to bother about capacity
-          planning, procurement of hardware, installation, configuration,
-          and training needs for the operations personnel. The platform
-          vendor makes the required changes to provision the additional
-          capacity requested. This makes cloud environments ideal for
-          horizontal scaling to meet the increased demand.</li>
-        <li>Regulatory compliance: Often regulatory compliance
-          requirements come in the way of adoption for cloud-hosted
-          solutions. But most of the leading API management vendors
-          have achieved industry compliances for their cloud-hosted
-          platforms and their products. PCI DSS for the payment industry
-          and HIPAA for the health industry are the most common
-          industry compliance requirements. Since the platform is already
-          compliant to the industry standards, it helps the client to easily
-          meet the PCI requirements for security and log management on
-          the cloud and other industry compliances.</li>
-       
-      </ul>
+    <ul class="unordered-list">
+      <li>Higher reliability and availability: Cloud platforms provide
+        clustered environments that are distributed across multiple data
+        centers and regions. This mitigates the risk of data center and
+        network outages, and increases the reliability and availability of
+        the platform. The API platform vendor handles traffic fluctuations
+        and makes capacity adjustments to meet the guaranteed SLA.</li>
+      <li>Faster time to market: The cloud instances of the API platforms
+        can be spun off almost immediately by the API vendors. This
+        saves time and hassle of hardware procurement, setup, and
+        configuration. The cloud instances are up and running very
+        quickly thus reducing the overall time to market for the API
+        program.</li>
+      <li>Reduced capital and operational expenditure: Cloud
+        deployments are generally available in a subscription model. You
+        pay by usage like number of API calls. This avoids upfront capital
+        expenditures and reduces ongoing in-house operational costs.</li>
+      <li>Reduced management overhead: Letting the API vendor focus
+        on the data center infrastructure helps enterprises focus on
+        building their API services. The API platform provider takes
+        care of management over heads of running and managing
+        the data center. They address all availability and performance
+        management of the underlying infrastructure. Software updates
+        and fixes are rolled out seamlessly by the vendors. The API
+        provider can focus on creating the API and its back end.</li>
+      <li>Increased scalability and agility: The licensing for the cloud
+        platforms are generally by API traffic volume. If the traffic
+        increases, API providers only pay additional licensing fee for
+        the increased traffic. They do not need to bother about capacity
+        planning, procurement of hardware, installation, configuration,
+        and training needs for the operations personnel. The platform
+        vendor makes the required changes to provision the additional
+        capacity requested. This makes cloud environments ideal for
+        horizontal scaling to meet the increased demand.</li>
+      <li>Regulatory compliance: Often regulatory compliance
+        requirements come in the way of adoption for cloud-hosted
+        solutions. But most of the leading API management vendors
+        have achieved industry compliances for their cloud-hosted
+        platforms and their products. PCI DSS for the payment industry
+        and HIPAA for the health industry are the most common
+        industry compliance requirements. Since the platform is already
+        compliant to the industry standards, it helps the client to easily
+        meet the PCI requirements for security and log management on
+        the cloud and other industry compliances.</li>
+
+    </ul>
     <h3>On-Premise Deployment</h3>
     <p class="pText">In an on-premise deployment model, the API provider purchases the software and
       takes the responsibility of setting up and running the entire platform in its data centers.
@@ -1075,32 +1099,33 @@
       additional training about the platform. Though there are initial challenges for setting up
       the on-premise infrstructure, following reasons can be the main drivers for on-premise
       deployment.</p>
-      <ul class="unordered-list">
-        <li>Enhanced security: With an on-premise deployment model, the
-          API service provider has full control on the data security. They
-          can manage where the under lying data stores would be present,
-          how infrastructure and the data in it is secured, and who can have
-          access to it. This also meets the increased security audit needs of
-          the enterprise.</li>
-        <li>Reduced network latency: Since the API gateway is installed
-          within the enterprise’s network, it cuts down on multiple network
-          hops. API providers may also plan to install the API gateways
-          within the same network as the back-end services. This reduces the
-          network latency and increases the overall performance of the APIs.</li>
-        <li>Better management and control: On-premise versioning
-          provides better management and control over performance and
-          scaling. You can decide on the number of instances of the product
-          components to be installed to support increased load. You have
-          control over changes to the environment configuration, such as
-          software and hardware upgrades.</li>
-       
-      </ul>
+    <ul class="unordered-list">
+      <li>Enhanced security: With an on-premise deployment model, the
+        API service provider has full control on the data security. They
+        can manage where the under lying data stores would be present,
+        how infrastructure and the data in it is secured, and who can have
+        access to it. This also meets the increased security audit needs of
+        the enterprise.</li>
+      <li>Reduced network latency: Since the API gateway is installed
+        within the enterprise’s network, it cuts down on multiple network
+        hops. API providers may also plan to install the API gateways
+        within the same network as the back-end services. This reduces the
+        network latency and increases the overall performance of the APIs.</li>
+      <li>Better management and control: On-premise versioning
+        provides better management and control over performance and
+        scaling. You can decide on the number of instances of the product
+        components to be installed to support increased load. You have
+        control over changes to the environment configuration, such as
+        software and hardware upgrades.</li>
+
+    </ul>
 
     <h3>APIs for Internal Application Integration</h3>
     <p class="pText">Enterprises use SOA for building services to achieve loose coupling and reusability.
       These services are used for internal application integration. SOAP and other protocols
       are used for integration. SOA provided the right level of security and governance, but
-      faced with the challenge of making the services easily discoverable and consumable.With huge investments already placed in SOA services, and with many business
+      faced with the challenge of making the services easily discoverable and consumable.With huge investments already
+      placed in SOA services, and with many business
       processes built around them, companies are less likely to throw it all out to embrace
       REST APIs. Hence, building an API on a clean slate is a rare opportunity. APIs have to be
       built on top of the SOA services that expose the back-end services to make them more
@@ -1132,8 +1157,8 @@
       It generates new and innovative ideas that otherwise would not have been possible. Many
       companies have seen a northbound trend in their API traffic due to the new experiences
       brought in by apps created by external developers using their APIs.</p>
-    
-    
+
+
     <h3>APIs for Mobile</h3>
     <p class="pText">Mobile apps have changed the way that humans interact with enterprises. Even though
       computing power is shifting from server rooms to mobile devices, mobile apps are
@@ -1163,62 +1188,78 @@
       XMPP, and many others that need to be supported by the API platform. A new generation
       of infrastructure powered by autoscalling capabilities, may also be needed in furture to
       support the scale of IoT communication traffic.</p>
-    
-   <center><button class="top-button"><a href="#top">Top</a></button></center>
-   </div>
 
-   <div class="grid-6">
-       
+    <center><button class="top-button"><a href="#top">TOP</a></button></center>
+  </div>
+
+  <div class="grid-6">
+
     <div class="card">
-     <img src="images/canvas.jpg" class="artist__img" alt="imagen of lucy Mckenzie">
-     <h4>Lucy McKenzie</h4><br>
-     
-     <p class="parrafo2">McKenzie collaborates with other creatives regularly. Through her collaborations, she challenges the notion of authorship by pointing to the strength of collective actions. </p>
+      <img src="images/canvas.jpg" class="artist__img" alt="imagen of lucy Mckenzie">
+      <h4>Lucy McKenzie</h4><br>
+
+      <p class="parrafo2">McKenzie collaborates with other creatives regularly. Through her collaborations, she
+        challenges the notion of authorship by pointing to the strength of collective actions. </p>
     </div>
-           
-            
+
+
     <div class="card">
-     <img src="images/background.jpg" class="artist__img" alt="imagen of emily speed" >
+      <img src="images/background.jpg" class="artist__img" alt="imagen of emily speed">
 
-     <h4>Emily Speed</h4><br>
-          
-     <p >Experience a new film installation by North West based artist Emily Speed. The film is inspired by Edwin Abbott’s 1884 novella Flatland, a satire of Victorian society, where all existence is limited to two dimensions and women are restricted to thin, straight lines. </p>
-     </div>
+      <h4>Emily Speed</h4><br>
 
-     <div class="card">
-       <img src="images/asia.jpg" class="artist__img" alt="Zahoor ul Akhlaq painting">
-       <h4>Zahoor ul Akhlaq</h4><br>
-       
-       <p class="parrafo2">Such marks make the image oscillate back and forth, back into the process of miniature making and forward into a Modernist frame. The reverse gear refers to the initial stage of drawing exercises: an exquisitely laborious procedure whereby the miniature student spends hours, days and nights, simply drawing parallel lines into square inch boxes with the razor sharp point of an extra hard pencil. </p>
-      </div>
+      <p>Experience a new film installation by North West based artist Emily Speed. The film is inspired by Edwin
+        Abbott’s 1884 novella Flatland, a satire of Victorian society, where all existence is limited to two dimensions
+        and women are restricted to thin, straight lines. </p>
+    </div>
 
-      <div class="card">
-       <img src="images/emily.jpg" class="artist__img" alt="imagen of emily speed" >
+    <div class="card">
+      <img src="images/asia.jpg" class="artist__img" alt="Zahoor ul Akhlaq painting">
+      <h4>Zahoor ul Akhlaq</h4><br>
 
-       <h4>Grief, Trauma, Love</h4><br>
-            
-       <p >And I love the kind of ongoing love affair, aesthetically and politically, between Black Americans and Puerto Ricans. There’s been so much synergy, especially in the Bronx, in East Harlem, Lower East Side, and parts of Brooklyn. And so in the mid-’70s, there were all these art collectives forming around Puerto Rican identity and really direct-action organizations.</p>
-       </div>
+      <p class="parrafo2">Such marks make the image oscillate back and forth, back into the process of miniature making
+        and forward into a Modernist frame. The reverse gear refers to the initial stage of drawing exercises: an
+        exquisitely laborious procedure whereby the miniature student spends hours, days and nights, simply drawing
+        parallel lines into square inch boxes with the razor sharp point of an extra hard pencil. </p>
+    </div>
+
+    <div class="card">
+      <img src="images/emily.jpg" class="artist__img" alt="imagen of emily speed">
+
+      <h4>Grief, Trauma, Love</h4><br>
+
+      <p>And I love the kind of ongoing love affair, aesthetically and politically, between Black Americans and Puerto
+        Ricans. There’s been so much synergy, especially in the Bronx, in East Harlem, Lower East Side, and parts of
+        Brooklyn. And so in the mid-’70s, there were all these art collectives forming around Puerto Rican identity and
+        really direct-action organizations.</p>
+    </div>
 
 
-       <div class="card">
-         <img src="images/work.jpg" class="artist__img" alt="imagen of lucy Mckenzie">
-         <h4>Love Your Work</h4><br>
-         
-         <p class="parrafo2">Can architecture and design write scenarios for the next generation of work? What will it take to anticipate and formulate work environments and experiences that are productive, humane, and ecologically responsible? “No Sweat” challenges designers to speculate on the spaces of work in an accelerated future, and to imagine a world in which a novel ethics of labor can emerge.</p>
-        </div>
+    <div class="card">
+      <img src="images/work.jpg" class="artist__img" alt="imagen of lucy Mckenzie">
+      <h4>Love Your Work</h4><br>
+
+      <p class="parrafo2">Can architecture and design write scenarios for the next generation of work? What will it take
+        to anticipate and formulate work environments and experiences that are productive, humane, and ecologically
+        responsible? “No Sweat” challenges designers to speculate on the spaces of work in an accelerated future, and to
+        imagine a world in which a novel ethics of labor can emerge.</p>
+    </div>
 
 
-        <div class="card">
-         <img src="images/harvard_design.png" class="artist__img" alt="imagen of lucy Mckenzie">
-         <h4>Harvard Design</h4><br>
-         
-         <p class="parrafo2">Contemporary public space projects should address both the digital and the physical layer of a place. The two are becoming increasingly interconnected and dependent on each other. Designers should awaken to the opport­unities emerging from their interaction and develop new ways of working that challenge the existing professional conventions. </p>
-        </div>
+    <div class="card">
+      <img src="images/harvard_design.png" class="artist__img" alt="imagen of lucy Mckenzie">
+      <h4>Harvard Design</h4><br>
 
- </div><!--fin grid-->
-  
-  
+      <p class="parrafo2">Contemporary public space projects should address both the digital and the physical layer of a
+        place. The two are becoming increasingly interconnected and dependent on each other. Designers should awaken to
+        the opport­unities emerging from their interaction and develop new ways of working that challenge the existing
+        professional conventions. </p>
+    </div>
+
+  </div>
+  <!--fin grid-->
+
+
 
   <script src="main.js"></script>
 
