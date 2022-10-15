@@ -1,0 +1,21 @@
+.grid-6{
+    background-color:wheat;
+    color: rgb(197, 94, 128);
+    font-size: medium;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(21rem, 1fr)) ;
+    padding: 5%;
+    gap: 3rem;
+}
+
+.artist__img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+.grid-6 h4{
+ 
+    color: rgb(95, 47, 61);
+    
+}
