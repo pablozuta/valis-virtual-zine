@@ -13,9 +13,10 @@
     
 
 .logo{
+    margin-left: 1.5rem;
+    color: palevioletred;
     
-    margin: 0.5rem;
-    margin-top: 1.3rem;
+    margin-top: 0.5rem;
     width: 50px;
     cursor: pointer;}
 
@@ -58,7 +59,7 @@
 .toggle-button .bar{
     height: 3px;
     width: 100%;
-    background-color: #fff;
+    background-color:palevioletred;
     border-radius:10px;
     }
 
@@ -74,7 +75,7 @@
     .logo{
         margin: 0.2rem;
         margin-top: .6rem;
-        margin-left: 0.4rem;}
+        margin-left: 0.8rem;}
     .navbar{
         flex-direction: column;
         align-items: flex-start;
