@@ -18,16 +18,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,200&display=swap"
     rel="stylesheet">
+    
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/barra.css" />
   <link rel="stylesheet" href="css/grid6.css" />
+
+
 
   <title>ANTICUERPO</title>
 </head>
 
 <body>
+  <!--barra navegacion-->
   <nav class="navbar">
-    <div class="logo"><span>VALIS</span>
+    <div class="logo"><a href="/"><span>VALIS</span></a>
       
     </div>
     <a href="#" class="toggle-button">
@@ -39,8 +43,8 @@
     </a>
     <div class="navbar-links">
       <ul>
-        <li><a href="math.html">MATH</a></li>
-        <li><a href="articles.html">ARTICLES</a></li>
+        <li><a href="math.html">UBIK</a></li>
+        <li><a href="articles.html">CYBERPUNK</a></li>
         <li><a href="tech.html">TECH</a></li>
       </ul>
     </div>
@@ -334,205 +338,7 @@
 
   </div>
 
-  <div class="textoBlanco" id="chapter-3">
-
-    <h2>CHAPTER 3: Designing a RESTful API Interface</h2>
-
-
-    <p class="pText">REST is an architectural style. It is not any strict standard but provides certain guidelines
-      and constraints to be followed. Roy Fielding originally described these constraints in his
-      doctoral dissertation and coined the name Representational State Transfer.REST relies on stateless, cacheable, and
-      client-server communication protocols such
-      as HTTP. By following the principles of REST and applying it to stateless protocols such as
-      HTTP, developers can build API interfaces that can be used from any device or operating
-      system.</p>
-    <h3>REST Principles</h3>
-    <p class="pText">REST is a set of design principles for building scalable web services. Roy Fielding
-      described the following six constraints in his PhD dissertation for building a RESTful
-      architecture:
-    </p>
-    <ul class="unordered-list">
-      <li>Uniform interface</li>
-      <li>Client-server</li>
-      <li>Stateless</li>
-      <li>Cache</li>
-      <li>Layered system</li>
-      <li>Code on demand</li>
-    </ul>
-    <h3>Uniform Interface</h3>
-    <p class="pText">A uniform interface helps to define the communication contract between client and
-      the server. It helps to decouple the architecture. Client and server applications can be
-      developed independently as long as they abide by the interface. The interface defines the
-      mechanism and format for interaction—where and how the client can access a server
-      resource.</p>
-    <h3>Client-Server</h3>
-    <p class="pText">The client-server constraint builds a loosely coupled and scalable web architecture.
-      As long as the client and the server follow a uniform interface, they can be developed
-      independently, using any language or technology.</p>
-    <h3>Stateless</h3>
-    <p class="pText">Statelessness is one of the key principles of a RESTful service. It dictates that a web server
-      is not required to remember the state of the client application. All relevant contextual
-      information should be sent by the client application in the request to the server for all its
-      interactions. The state information can be included as part of the URI as a variable or it
-      can be included as a query parameter, header parameter, or in the body. Once the request
-      is processed by the server, the updated state of the resource is sent back in the response
-      via headers and the body.</p>
-    <h3>Cache</h3>
-    <p class="pText">Caching is yet another REST constraint that increases the scalability and overall
-      performance of the server application. The cache may reside anywhere in the network
-      path between the client and server. It can reside in the server, or an external location
-      like the CDN, or inside the client application itself. By following the caching constraint,
-      the server can specify if a particular response can be cached or not. If the response is
-      cacheable, the server may specify the lifetime of the cached response. Based on the
-      lifetime, the client can decide if it wants to use a cached response or make a separate
-      request to get the live data.</p>
-    <h3>Layered Systems</h3>
-    <p class="pText">The layered system principle enables a network intermediary to be installed between the
-      client app and the actual back-end server. The layered system can be a proxy or a gateway
-      that acts as a facade for the back-end system. It can be used to implement security,
-      caching, rate limiting, load balancing, and so forth. The client never gets to know if it is
-      connected directly to the source of the service or to an intermediary. The caching and
-      load balancing implemented on the intermediary node can improve the scalability of the
-      system.</p>
-    <h3>Code on Demand</h3>
-    <p class="pText">The code-on-demand constraint enables a web server to transfer executable programs to
-      a client. This constraint tends to establish a technology coupling between the client and
-      the web server. The client must be able to understand and execute the code it downloads
-      on demand from the server. This is the only optional constraint for the REST architectural
-      style. Examples of code-on-demand are Java applets, scripts, plug-ins, and Flash.</p>
-    <h3>Designing a RESTful API</h3>
-    <p class="pText">Now that you understand the fundamentals of REST principles, let’s look at the various
-      considerations for designing a REST API interface.
-      A uniform interface is one of the fundamental principles of the RESTful architectural
-      style. Web components interoperate consistently within the uniform interface’s four
-      constraints, which Fielding identified as follows:</p>
-
-    <ul class="unordered-list">
-      <li>Identification of resources</li>
-      <li>Manipulation of resources through representation</li>
-      <li>Self-descriptive messages</li>
-      <li>Hypermedia as the engine of application state (HATEOS)</li>
-    </ul>
-    <img src="https://cdna.artstation.com/p/assets/images/images/015/674/404/large/ella-moon-.jpg?1549212059&dl=1"
-      alt="gato4" class="imagen-articulo">
-    <h3>Identification of Resources</h3>
-    <p class="pText">Before we can identify a resource, we need to understand what a resource is.
-      A resource is any web-based concept that can be referenced by a unique identifier and
-      manipulated via the uniform interface. While designing a REST API for a travel portal,
-      your resources could be customer, reservation, ticket, hotel, flight, bus, car, and so forth.
-      A resource can be a single entity or a collection of entities.A resource is identified by a URI (Uniform Resource
-      Identifier). A URI provides the
-      name and the network address of a resource.The resources themselves are conceptually separate from the
-      representations that
-      are returned to the client. For example, the resource may be residing in some database,
-      but when the server responds to a request for a resource, it does not send the database
-      itself; rather it responds with some representation of the resource that represents a record
-      in the database. For example, the record of a resource instance may be represented
-      in XML, JSON, or HTML format, when it is returned to the client.</p>
-    <h3>Manipulation of Resources through Representation</h3>
-    <p class="pText">Clients modify a representation of a resource. The same exact resource may be
-      represented in different ways for different clients. For example, for a UI client, it might
-      be represented in HTML format; whereas for application clients, it might be represented
-      in either JSON or XML format. The representation is a way for clients to interact with the
-      resource, but it is not the resource itself.</p>
-    <h3>Self-Descriptive Messages</h3>
-    <p class="pText">Each message (request/response) must be self-descriptive. That mean that the message may
-      contain additional information to tell the recipient how to process it. Information such as
-      format (JSON/XML), size, payload itself, and other metadata information included in the
-      message can be used by the recipient for processing. An HTTP message provides headers to
-      organize the various types of metadata into uniform fields. For example, Content-Type can
-      he used to specify the format of the message; Content-Length can be used to specify the size
-      of the payload. Many such HTTP headers can be included in the message to describe to the
-      recipient on how they should process the message.</p>
-    <h3>Hypermedia as the Engine of Application State
-      (HATEOAS)</h3>
-    <p class="pText">A resources’ state information may include links to other resources. These links provide
-      information on what to do next and how to traverse through other related resources in
-      a meaningful manner; for example, after getting information about the account, you
-      may want to deposit, withdraw, or transfer money.The presence or absence of a link in a resource representation is
-      an important part of
-      resource’s current state.
-      While designing a REST API interface, you should keep all of these constraints in
-      mind. The next few sections look at how to build a REST API interface by following these
-      constraints.</p>
-    <h3>Resource Identifier Design Using URIs</h3>
-    <p class="pText">In a RESTful API, designing the resource is one of the most important tasks for its success.
-      A well-designed resource makes the API intuitive, simple to understand, and easy to use.
-      Let’s look at some of the best practices for designing RESTful APIs.Every resource should have a meaningful name
-      to identify itself. Name a resource using
-      a noun as opposed to a verb or an action. The URI for the resource should refer to a
-      thing rather than an action. Also CRUD function names should not be used in the URI
-      or resource names; for example, while designing resource for a customer’s entity, the
-      resource URI should be named /customers instead of /getCustomers.</p>
-    <h3>Modelling Resources and Subresources</h3>
-    <p class="pText">According to Roy Fielding’s dissertation a resource is “any concept that might be the
-      target of an author’s hypertext reference must fit within the definition of a resource.” It can
-      be single instance of an object or a collection of objects. Even business processes and
-      capabilities can fit the definition of a resource according to Roy Fielding. Resources form
-      the core of REST API design. The starting point of modelling resources is to analyze the
-      current business domain and identify all the relevant objects in it that can be named. The
-      focus for identifying resources and modelling them should be from the consumer’s point
-      of view. It is important to select the right resources and model them at the right level of
-      granularity.</p>
-    <h3>Best Practices for Identifying REST API Resources</h3>
-    <p class="pText">The following are some of the best practices for identifying resources for RESTful API
-      design.</p>
-
-    <ul class="unordered-list">
-      <li>Resources should not be too fine grained because they lead to
-        chatty communication between the consumer and the provider.
-        Chatty communication degrades overall performance of the app
-        that is using the API; hence, it should be avoided.</li>
-      <li>Resources should not be too course grained because this leads to
-        APIs that are too difficult to use and maintain.</li>
-      <li>Resources should be designed such that they do not lead to
-        migration of control flow business logic to the API consumer side;
-        for example, if updates to the customer information requires
-        multiple fields to be updated in a specific sequence that depends
-        on some logic, then the API to update the customer information
-        should be designed so that the client is not responsible for
-        executing the required flow logic. The responsibility of executing
-        the logic should lie with the resource server hosting the resource.
-        Shifting the logic to the consumer side has the risk of putting the
-        resource data in an inconsistent state, especially in the event of
-        failure. Fine-grained APIs that perform CRUD operations may
-        put the business logic on the client side, creating tight coupling
-        between the API consumer and the provider. Any change in
-        business logic at the provider end would require corresponding
-        changes on the API consumer side. They may not be possible
-        in many cases, where consumers do not want to make frequent
-        changes to the applications on their side.</li>
-      <li>Resource selection should be independent of the underlying
-        domain implementation details. Hence, even a business
-        process can be modelled as a resource if the process involves
-        the operation of multiple low-level resources. For example, the
-        process of setting up a customer in a bank may be modelled as
-        a resource. So there can be a resource created for a customer
-        account setup—such as /accountSetup—that needs to call
-        operations on related resources for entities such as customer and
-        account. By modeling a business process as a resource, the API
-        consumer does not need to apply the business logic in the code.</li>
-    </ul>
-
-
-    <h3>URI Path Design</h3>
-    <p class="pText">Every collection and resource in an API has its own URL. It is recommended to design
-      URLs using an alternate combination of collection/resource path segments, relative to the
-      API entry point.There may be arbitrary levels of nesting for subresources. However, it is
-      recommended to limit the depth to two or three, if possible, because longer URLs are
-      more difficult to work with.
-      A URI design that follows a predictable pattern with a hierarchical approach
-      to traverse through the resources eases developer adoption; for example, /stores/
-      {storeId}/products/{productId}. This helps developers to guess the URI for a given
-      resource; and hence, it can make direct calls without going through links.</p>
-    <h3>URI Format</h3>
-    <p class="pText">Let’s now look at the recommended format of a URI and learn how this format can be
-      effectively used for designing an API. As per RFC 23964: “a Uniform Resource Identifier
-      (URI) is a compact string of characters for identifying an abstract or physical resource.”
-      This identifier can be realized in one of two ways: as a Uniform Resource Locator (URL)
-      or a Uniform Resource Name (URN).</p>
-    <center><button class="top-button"><a href="#top">TOP</a></button></center>
-  </div>
+  
 
   <div class="texto" id="chapter-4">
 
@@ -1258,6 +1064,11 @@
 
   </div>
   <!--fin grid-->
+
+  <!--comienzo de footer-->
+  <footer>
+    <p>Copyright &copy; 2022</p>
+  </footer>
 
 
 
