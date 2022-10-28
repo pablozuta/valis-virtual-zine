@@ -18,7 +18,7 @@ body {
 
 h1 {
   align-items: center;
-  font-size: 10vw;
+  font-size: 7vw;
   margin-top: 3.3rem;
   font-weight: 300;
   letter-spacing: 0.9rem;
@@ -126,6 +126,12 @@ a:hover {
 }
 .top-button a:hover {
   color: palevioletred;
+}
+
+.bandcamp-player-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* -------media queries-------- */
