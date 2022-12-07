@@ -125,6 +125,13 @@
     <p class="pText">The outsiders were a law unto themselves, operating outside the confines of society and the constraints of the mainstream web. They were a force to be reckoned with, feared and respected by those who knew of their existence. </p>
     <p class="pText">But they were also a vulnerable group, constantly at risk of being discovered and persecuted by the authorities who sought to control and regulate the digital landscape. They lived on the edge, always one step ahead of those who sought to silence them. </p>
     <p class="pText">The outsiders were a powerful and dangerous force, but they were also a necessary one, fighting for the freedom and independence of the digital world.</p>
+    <p class="pText">In the sprawling, hyper-technological world of the cyberpunk metropolis, the outsiders are a marginalized group, struggling to survive on the fringes of a society that has left them behind. They are the forgotten people, overshadowed by the glitz and glamour of the city's elite, who live in gleaming towers of glass and steel and enjoy the fruits of a world powered by advanced technology.
+
+    For the outsiders, life is a daily struggle. They eke out a living in the grimy underworld of the city, scavenging for scraps of technology and dealing in the black market. They are forced to live in the shadows, constantly on the run from the ruthless corporations that rule the city with an iron fist.</p>
+    <p class="pText">But despite their harsh circumstances, the outsiders are a resilient and resourceful group. They have adapted to the harsh realities of life in the cyberpunk world, and have learned to use technology to their advantage. They are skilled hackers and information brokers, able to navigate the complex networks and databases that underpin the city's infrastructure.
+
+    But despite their cunning and ingenuity, the outsiders are still at the mercy of the powerful corporations that control the city. They are constantly on the brink of extinction, forced to take dangerous risks and make difficult choices in order to survive.</p>
+    <p class="pText">In the world of the cyberpunk metropolis, the outsiders are the forgotten ones, struggling to survive in a world that has left them behind. But even in the face of overwhelming odds, they refuse to give up, using their wits and determination to carve out a place for themselves in a world that seems determined to crush them.</p>
     
     <center><button class="top-button"><a href="#top">TOP</a></button></center>
 
@@ -134,101 +141,27 @@
 
   <div class="texto" id="chapter-4">
 
-    <h2>CHAPTER 4: API Documentation</h2>
+    <h2>CHAPTER 3: The Corporations</h2>
 
   
-      class="imagen-articulo">
 
-    <p class="pText">Documenting a REST API is important for its successful adoption. APIs expose data
-      and services that consumers want to use. An API should be designed with an interface
-      that the consumer can understand. API documentation is key to the app developers
-      comprehending the API. The documentation should help the developer to learn about
-      the API functionality and enable them to start using it easily. This chapter looks at the
-      aspects of documenting an API and some of the tools and technologies available for API
-      documentation, including RAML, Swagger, API Blueprint, and others.</p>
-    <h3>The Importance of API Documentation</h3>
-    <p class="pText">As an API provider or developer, you may master your API. You have inside knowledge
-      about its functionality, what it is supposed to do, how it is to be used, its security,
-      limitations, error scenarios, and so forth. As an API provider, you have gradually learned
-      everything about the API through various discussions, documentation, and references.
-      However, this is not the case for the consumers of your API.As enterprises move along in the digital
-      transformation journey, there has been
-      exponential growth in public and private APIs. In this competitive world, it is very likely
-      that the data and services exposed by your API may also be exposed by another API
-      provider.The API documentation should</p>
-
-
-    <ul class="unordered-list">
-      <li>Get users started quickly</li>
-      <li>Include useful and relevant information</li>
-      <li>Provide sample code</li>
-      <li>Document a list of REST endpoints</li>
-      <li>Document the message payload</li>
-      <li>Provide Response status code and error messages</li>
-    </ul>
-
-
-    <h3>Audience for API Documentation</h3>
-    <p class="pText">API documentation is used by various groups of people for various reasons. It is like
-      a user manual for a product. Like a user manual, API documentation should have a
-      quick-start guide, which quickly makes the first API call and lets consumers have a feel
-      of it.A good API document communicates all information about the usage of the API— for
-      both humans and machines. The API document should provide all necessary information
-      to app developers or API consumers in a human-readable format. The documentation
-      should help them assess its suitability for use in their client app. It should provide
-      information about its licensing policy and usage requirements-input and output
-      parameters, message format, error messages, and more.</p>
-    <h3>API Documentation Standards: Swagger, RAML,
-      and API Blueprint</h3>
-    <p class="pText">The daunting task of API documentation is keeping the documentation in sync with
-      the actual implementation. If you take a bottom-up approach and create the API
-      documentation manually after the implementation, you risk the documentation falling
-      out of sync if there are enhancements to the API interface in the next version, especially
-      if the process does not enforce regeneration or validation of the API document. Similarly,
-      with a top-down approach, you may start with the API documentation and manually
-      create the skeleton of the API interface according to the defined interface.There are many competing tools for API
-      documentation. Some of them are in a fairly
-      matured state, while others are still evolving. The next few sections look at the Swagger,
-      RAML, and API Blueprint frameworks so that you can see how they are used to document
-      an API interface. The tools that they provide are also discussed.</p>
-    <h3>Swagger</h3>
-    <p class="pText">Swagger is one of the most popular API documentation frameworks. It provides a
-      standard, language-agnostic way of defining a REST API interface. This approach allows
-      the client to understand the capabilities of the REST service without any prior access to the
-      service implementation code or network inspection.An API’s Swagger specifications are documented in JSON or YAML
-      format. Swaggerenabled
-      APIs expose JSON files that adhere to the specifications. The API specification
-      can be a manually generated static file or automatically generated from the application.The Swagger UI provides a
-      framework to dynamically generate beautiful interactive
-      documentation from a Swagger-compliant API. It is an independent collection of HTML,
-      CSS, and JavaScript that can be hosted on any server. It can be used by consumers to
-      explore and interact with the API and understand its behavior.</p>
-    <h3>RAML</h3>
-    <p class="pText">RAML stands for RESTful API Markup Language. It is a Markdown-based language for
-      modeling APIs. It makes it easy to manage the entire lifecycle of an API: design, build,
-      test, document, and share. RAML is both machine-readable and human friendly. RAML is
-      designed to support an API-First top-down development approach. It provides the format
-      for the contract between the API provider and the API consumer.</p>
-    <h3>API Blueprint Document Structure</h3>
-    <p class="pText">An API Blueprint document is structured into logical sections. For example, headers, URL
-      parameters, and request/response can each be described in logically grouped sections.
-      Each section is defined by predefined keywords. Depending on the section, the keyword
-      is written either as a Markdown header entity or a list item entity.</p>
-    <h3>Other API Documentation Frameworks</h3>
-    <p class="pText">Swagger, RAML, and API Blueprint are the most popular API documentation standards.
-      Most API management vendors include support (in various forms) in their tools for one
-      or more of these languages. However, these specs are still evolving. In parallel, there have
-      been efforts from various corners to create specs that address competitors’ shortcomings.
-      As a result, many competing specs are available today from various vendors. These are in
-      various levels of maturity.</p>
+   
       
+ 
+  <p class="pText">The corporations were the enemies of the outsiders, powerful and ruthless entities that sought to control and regulate the digital landscape. They were driven by greed and ambition, using their vast resources and influence to crush any opposition to their rule.</p>
+  <p class="pText">To the corporations, the outsiders were a threat, a group of rebels and rebels who refused to be cowed by their power and authority. The corporations saw the outsiders as a threat to their control and dominance, and they were determined to eliminate them at any cost. </p>
+  <p class="pText">The corporations used their wealth and power to wage a relentless war against the outsiders, using their vast networks of spies and enforcers to track and capture them. They employed the latest technology and tactics to hunt down the rebels and silence them, using whatever means necessary to achieve their goals. </p>
+  <p class="pText">But the outsiders were a resilient and resourceful group, and they refused to be silenced. They fought back against the corporations, using their own skills and knowledge to outmaneuver and outwit their enemies.  </p>
+  <p class="pText">The war between the corporations and the outsiders was a long and brutal one, with no end in sight. It was a battle for the very soul of the digital landscape, and only one side could emerge victorious. </p>
+
   <img class="imagen-articulo" src="https://thumbs.gfycat.com/LimpBestFritillarybutterfly.webp"
-  alt="imagen de androides">
+  alt="gato cyberpunk">
     <center><button class="top-button"><a href="#top">TOP</a></button></center>
   </div>
+  
 
 
-
+ 
 
 
 
